@@ -139,3 +139,9 @@ Reemplaza `{id_prestamo}` en la URL por el valor alfanumérico largo del `id` qu
 Estado HTTP `200` con el préstamo modificado a estado `DEVUELTO`.
 
 El stock del libro regresará a su valor original al consultar nuevamente su disponibilidad.
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/63b38636-a948-4d64-bcbc-cb224ade1eb8" />
+
+<img width="1914" height="1017" alt="image" src="https://github.com/user-attachments/assets/e6483483-8087-4379-99c5-d1a975f8dc14" />
+
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/6df833a5-2cfa-4c1c-8a3d-366a90a5028f" />

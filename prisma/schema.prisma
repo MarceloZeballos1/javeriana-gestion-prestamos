@@ -1,0 +1,31 @@
+﻿generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Libro {
+  isbn                  String     @id
+  titulo                String
+  areaConocimiento      String
+  ejemplaresDisponibles Int
+  prestamos             Prestamo[]
+}
+
+model Prestamo {
+  id                    String         @id @default(uuid())
+  isbn                  String
+  identificacionUsuario String
+  fechaPrestamo         DateTime
+  fechaVencimiento      DateTime
+  estado                EstadoPrestamo
+  libro                 Libro          @relation(fields: [isbn], references: [isbn])
+}
+
+enum EstadoPrestamo {
+  ACTIVO
+  DEVUELTO
+}

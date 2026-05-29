@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { registrarPrestamoController, registrarDevolucionController, listarPrestamosVencidosController, consultarDisponibilidadController } from '../controllers/bibliotecaController.js';
+import { registrarPrestamoController, registrarDevolucionController, listarPrestamosVencidosController, consultarDisponibilidadController } from '../controllers/bibliotecaController';
 
 const router = Router();
 

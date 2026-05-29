@@ -1,9 +1,10 @@
-generator client {
-  provider = "prisma-client-js"
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
-datasource db {
-  provider = "mysql"
+generator client {
+  provider = "prisma-client-js"
 }
 
 model Libro {
@@ -15,16 +16,11 @@ model Libro {
 }
 
 model Prestamo {
-  id                    String         @id @default(uuid())
+  id                    String   @id @default(uuid())
   isbn                  String
   identificacionUsuario String
   fechaPrestamo         DateTime
   fechaVencimiento      DateTime
-  estado                EstadoPrestamo
-  libro                 Libro          @relation(fields: [isbn], references: [isbn])
-}
-
-enum EstadoPrestamo {
-  ACTIVO
-  DEVUELTO
+  estado                String
+  libro                 Libro    @relation(fields: [isbn], references: [isbn])
 }

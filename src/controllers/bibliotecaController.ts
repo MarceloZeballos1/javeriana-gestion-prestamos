@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { registrarPrestamo, registrarDevolucion, listarPrestamosVencidos, consultarDisponibilidad } from '../services/bibliotecaService.js';
+import { registrarPrestamo, registrarDevolucion, listarPrestamosVencidos, consultarDisponibilidad } from '../services/bibliotecaService';
 
 export const registrarPrestamoController = async (req: Request, res: Response): Promise<void> => {
   try {
